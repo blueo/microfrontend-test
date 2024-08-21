@@ -1,0 +1,13 @@
+/**
+ * Global styles which affect everything on the site
+ *
+ * Think twice before adding something in here, could it go elsewhere?
+ * We don't want this to become a dumping ground
+ */
+
+/**
+ * Vue.js cloak style
+ */
+[v-cloak] {
+  display: none;
+}

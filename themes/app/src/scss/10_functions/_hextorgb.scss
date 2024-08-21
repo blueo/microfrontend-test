@@ -1,0 +1,14 @@
+/**
+ * Convert hex colours to rgb() syntax
+ * this is useful if you want to add an opacity
+ *
+ * @param   {string}  $hex  - the hex colour to convert to rgb
+ *
+ * @example
+ * .btn {
+ *   background-color: rgba(#{hextorgb($color-blue)}, 0.4);
+ * }
+ */
+@function hextorgb($hex) {
+  @return red($hex), green($hex), blue($hex);
+}

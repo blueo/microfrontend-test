@@ -1,0 +1,82 @@
+/**
+ * --------
+ * Settings - global variables for the project
+ * --------
+ */
+
+@import '00_settings/variables';
+@import '00_settings/breakpoints';
+
+/**
+ * ---------
+ * Functions - global utility functions
+ * ---------
+ */
+
+@import '10_functions/*';
+
+/**
+ * ------
+ * Mixins - global reusable styles
+ * ------
+ */
+
+@import '20_mixins/*';
+
+/**
+ * ----------
+ * Frameworks - standard styling libraries to use
+ * ----------
+ */
+
+@import '30_frameworks/bootstrap';
+
+/**
+ * ----
+ * Base - essential styling for the project
+ * ----
+ */
+
+@import '40_base/*';
+
+/**
+ * ---------
+ * Templates - styles required for page templates
+ * ---------
+ */
+
+@import '50_templates/*';
+
+/**
+ * ------
+ * Blocks - elemental block styling
+ * ------
+ */
+
+@import '60_blocks/*';
+
+/**
+ * ----------
+ * Components - used within templates or blocks
+ * ----------
+ */
+
+@import '70_components/*';
+
+/**
+ * -----------
+ * Third-party - styling for third-party code, plugins or includes
+ * -----------
+ */
+
+@import '80_third-party/*';
+
+/**
+ * ---------
+ * Overrides - should be used for highly specific overrides (e.g. for third-party code)
+ *
+ * Only use this if you have to !
+ * ---------
+ */
+
+@import '90_overrides/*';

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset name="{project-name}-coding-standards">
+    <description>Coding standards for {project-name} - using the Silverstripe Bespoke Coding Standard</description>
+
+    <!--
+        The aim of the Silverstripe Bespoke Coding standard is to keep consistency between projects.
+        If you are adding a custom rule below, please consider raising a PR to add it to the standard at:
+        https://github.com/silverstripeltd/bespoke-standards
+     -->
+    <rule ref="./vendor/silverstripeltd/bespoke-standards/ruleset.xml">
+        <!-- Exclude anything you need to at a project level here -->
+    </rule>
+</ruleset>

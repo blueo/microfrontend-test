@@ -1,0 +1,26 @@
+SilverStripe\Assets\Image:
+  ogImage:
+    Title: 'Test image'
+  ogImageSiteConfig:
+    Title: 'Test image siteConfig'
+
+Page:
+  simple:
+    Title: 'Page title 2'
+  with-og:
+    Title: 'About Us'
+    URLSegment: 'about-us'
+    OGTitle: 'Open Graph title'
+    OGDescription: 'Open Graph description'
+    OGImage: =>SilverStripe\Assets\Image.ogImage
+  with-no-og-title:
+    Title: 'Page title 2'
+    OGTitle: ''
+    OGDescription: 'Open Graph description'
+    OGImage: =>SilverStripe\Assets\Image.ogImage
+
+SilverStripe\SiteConfig\SiteConfig:
+  SiteConfig:
+    ID: 1
+    Title: Your Site Name
+    OGImage: =>SilverStripe\Assets\Image.ogImageSiteConfig

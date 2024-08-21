@@ -1,0 +1,56 @@
+/**
+ * Utility mixins to covert SCSS variables to CSS variables
+ */
+
+
+/**
+ * Copy a scss map of colours to their equivalent CSS variables
+ *
+ * for example
+ *  $color-black: #000;
+ *  $color-white: #fff;
+ *
+ *  $colours-in-css: (
+ *   black: $color-black,
+ *   white: $color-white,
+ *  );
+ *
+ *  @include copyColoursToCssVars($colours-in-css);
+ *
+ * will create
+ * --color-black: #000;
+ * --color-black--rgb: 0,0,0;
+ * --color-white: #fff;
+ * --color-white--rgb: 255, 255, 255;
+ *
+ */
+@mixin copyColoursToCssVars($colours) {
+  @each $name, $hex in $colours {
+    --color-#{"" + $name}: #{$hex};
+    --color-#{"" + $name}--rgb: #{hextorgb($hex)};
+  }
+}
+
+/**
+ * Copy a scss map of variables to their equivalent CSS variables
+ *
+ * for example
+ * $font-family-base: 'Open Sans', sans-serif;
+ * $font-size-base: 1rem;
+ *
+ * $vars-in-css: (
+ *  font-family-base: $font-family-base,
+ *  font-size-base: $font-size-base
+ * );
+ * @include copyVariablesToCssVars($vars-in-css);
+ *
+ * will create
+ * --font-family-base: 'Open Sans', sans-serif;
+ * --font-size-base: 1rem;
+ *
+ */
+@mixin copyVariablesToCssVars($variables) {
+  @each $name, $var in $variables {
+    --#{"" + $name}: #{$var};
+  }
+}

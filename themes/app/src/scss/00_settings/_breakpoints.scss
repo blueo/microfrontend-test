@@ -1,0 +1,17 @@
+/**
+ * Breakpoints for responsive behaviour
+ */
+
+$grid-breakpoints: (
+  xs: 0,
+  mobile-xs: 360px,
+  mobile-s: 576px,
+  tablet-s: 768px,
+  tablet-m: 992px,
+  desktop-s: 1040px,
+  desktop-m: 1280px,
+  desktop-l: 1350px,
+  desktop-xl: 1440px,
+  desktop-xxl: 1680px,
+  desktop-3xl: 1920px
+);

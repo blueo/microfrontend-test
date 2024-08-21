@@ -1,0 +1,10 @@
+---
+name: open-graph
+---
+SilverStripe\CMS\Model\SiteTree:
+  extensions:
+    - App\Extensions\OpenGraphSiteTreeExtension
+
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - App\Extensions\OpenGraphSiteConfigExtension

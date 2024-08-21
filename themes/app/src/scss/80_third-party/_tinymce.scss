@@ -1,0 +1,89 @@
+/**
+ * TinyMCE editor classes
+ */
+
+.mce-content-body {
+  // add a little spacing so the text in the editor isn't
+  // pressed up against the edge
+  margin: 1rem;
+}
+
+.caption {
+  &.leftAlone,
+  &.left {
+    text-align: left;
+  }
+
+  &.rightAlone,
+  &.right {
+    text-align: right;
+  }
+
+  &.center {
+    text-align: center;
+  }
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+
+  &.left {
+    float: left;
+    margin: 0 2.5rem 2.5rem 0;
+  }
+
+  &.right {
+    float: right;
+    margin: 0 0 2.5rem 2.5rem;
+    clear: none;
+  }
+
+  &.center {
+    margin: 2.5rem auto;
+  }
+
+  &.rightAlone {
+    float: right;
+    margin: 2.5rem 0;
+    clear: both;
+  }
+
+  &.leftAlone {
+    margin: 2.5rem 0;
+  }
+
+  + .caption {
+    position: relative;
+    top: -1.5rem;
+  }
+}
+
+.captionImage {
+  &.left {
+    float: left;
+    margin: 2.5rem 2.5rem 0 0;
+
+    + p {
+      clear: none;
+    }
+  }
+
+  &.right {
+    float: right;
+    margin: 0 0 2.5rem 2.5rem;
+
+    + p {
+      clear: none;
+    }
+  }
+
+  &.center {
+    margin: 0 auto;
+  }
+
+  &.rightAlone {
+    float: right;
+  }
+}

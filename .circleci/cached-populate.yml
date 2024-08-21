@@ -1,0 +1,14 @@
+# This config is used when the populate has been cached in CI
+# to allow files to be properly handled
+---
+Name: app-populate
+After: myproject
+---
+DNADesign\Populate\Populate:
+  truncate_objects:
+    - SilverStripe\Assets\File
+    - SilverStripe\Assets\Image
+    - SilverStripe\Assets\Folder
+  include_yaml_fixtures:
+    # - 'app/populate/fixtures/populate-files.yml'
+    # - 'app/populate/fixtures/populate-images.yml'

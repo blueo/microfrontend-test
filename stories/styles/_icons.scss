@@ -1,0 +1,37 @@
+/**
+ * Define icons to appear in storybook
+ */
+
+$icons: (
+  // my-icon,
+  // my-other-icon,
+  chev-down,
+);
+
+.sb {
+  &__icon-holder {
+    width: 5rem;
+    height: 5rem;
+    border: 1rem solid lightgrey;
+    margin-bottom: 3rem;
+    border-radius: 0.2rem;
+  }
+
+  &__icon {
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    vertical-align: middle;
+    background-color: lightgrey;
+  }
+}
+
+@each $icon in $icons {
+  .sb__icon--#{$icon} {
+    background-image: url('../../themes/app/src/icons/#{$icon}.svg');
+  }
+}

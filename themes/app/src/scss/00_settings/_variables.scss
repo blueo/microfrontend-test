@@ -1,0 +1,159 @@
+/**
+ * Application variables
+ */
+$font-path: '../../fonts' !default;
+$icon-path: '../../icons' !default;
+$image-path: '../../images' !default;
+
+
+/* Colors */
+$color-black: #000;
+$color-white: #FFF;
+$color-grey-dark: #222;
+$color-grey-mid: #ADB6B8;
+$color-grey-light: #EEE;
+$color-red: #F00;
+$color-green: #0F0;
+$color-blue: #00F;
+
+
+/* Fonts */
+$font-family-sans-serif: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-family-serif: 'TimesNewRoman', 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+$font-family-base: $font-family-sans-serif;
+
+
+/* Font weights */
+$font-weight-thin: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-black: 900;
+
+$font-weight-base: $font-weight-regular !default;
+
+$font-weight-h1: $font-weight-bold !default;
+$font-weight-h2: $font-weight-bold !default;
+$font-weight-h3: $font-weight-bold !default;
+$font-weight-h4: $font-weight-bold !default;
+$font-weight-h5: $font-weight-bold !default;
+$font-weight-h6: $font-weight-bold !default;
+
+$font-weight-paragraph: $font-weight-base !default;
+$font-weight-paragraph-small: $font-weight-regular !default;
+$font-weight-lead: $font-weight-semibold !default;
+$font-weight-blockquote: $font-weight-semibold !default;
+$font-weight-caption: $font-weight-regular !default;
+
+
+/* Font colours */
+$font-color-h1: $color-black;
+$font-color-h2: $color-black;
+$font-color-h3: $color-grey-dark;
+$font-color-h4: $color-grey-dark;
+$font-color-h5: $color-grey-dark;
+$font-color-h6: $color-grey-dark;
+
+$font-color-paragraph: $color-black;
+$font-color-link: $color-blue;
+$font-color-lead: $color-black;
+$font-color-blockquote: $color-black;
+$font-color-caption: $color-black;
+
+
+/* Font sizes */
+$font-size-base: 1.8rem !default; // ~18px - body font-size set to 10px for easy px-rem conversion
+
+$font-size-h1: 4.8rem !default;
+$font-size-h2: 3.0rem !default;
+$font-size-h3: 2.4rem !default;
+$font-size-h4: 2.2rem !default;
+$font-size-h5: 2.0rem !default;
+$font-size-h6: 1.8rem !default;
+
+$font-size-paragraph: $font-size-base !default;
+$font-size-lead: 2.0rem !default;
+$font-size-blockquote: 2.4rem !default;
+$font-size-caption: 1.6rem !default;
+
+$font-size-h1-mobile: 3.2rem !default;
+$font-size-h1-tablet: 3.6rem !default;
+$font-size-h2-mobile: 2.6rem !default;
+$font-size-lead-mobile: 2.0rem !default;
+
+$font-size-footer: 1.4rem !default;
+
+
+/* Line heights */
+$line-height-base: 1.6 !default;
+
+$line-height-h1: 1.1 !default;
+$line-height-h2: 1.2 !default;
+$line-height-h3: 1.3 !default;
+$line-height-h4: 1.3 !default;
+$line-height-h5: 1.3 !default;
+$line-height-h6: 1.4 !default;
+
+$line-height-paragraph: $line-height-base !default;
+$line-height-lead: 1.4 !default;
+$line-height-blockquote: 1.3 !default;
+$line-height-caption: 1.4 !default;
+
+$line-height-h1-mobile: 1.1 !default;
+$line-height-h1-tablet: 1.1 !default;
+$line-height-h2-mobile: 1.3 !default;
+$line-height-lead-mobile: 1.4 !default;
+
+
+/* Font spacing */
+$margin-top-h1: 0;
+$margin-bottom-h1: 2.2rem;
+$margin-top-h2: 3.0rem;
+$margin-bottom-h2: 1.2rem;
+$margin-top-h3: 2.4rem;
+$margin-bottom-h3: 1.0rem;
+$margin-top-h4: 2.0rem;
+$margin-bottom-h4: 1.0rem;
+$margin-top-h5: 2.0rem;
+$margin-bottom-h5: 0.8rem;
+$margin-top-h6: 2.0rem;
+$margin-bottom-h6: 0.6rem;
+
+$margin-top-lead: 1.2rem;
+$margin-bottom-lead: 3.0rem;
+$margin-top-paragraph: 0;
+$margin-bottom-paragraph: 1.6rem;
+$margin-top-blockquote: 3.0rem;
+$margin-bottom-blockquote: 3.0rem;
+$margin-top-caption: 1.0rem;
+$margin-bottom-caption: 1.0rem;
+
+
+/* Global Spacing */
+$header-spacing-bottom: 0.5em;
+$header-spacing-top: 1em;
+
+$block-spacing-top-mobile: 2rem;
+$block-spacing-bottom-mobile: 2rem;
+$block-spacing-top-tablet: 3rem;
+$block-spacing-bottom-tablet: 3rem;
+$block-spacing-top: 5rem;
+$block-spacing-bottom: 5rem;
+
+$footer-spacing-top: 3.5rem;
+$footer-spacing-bottom: 1rem;
+
+/**
+ * Bootstrap variable overrides
+ */
+$enable-dark-mode: false;
+
+/**
+ * Miscellaneous
+ */
+
+$meganav-padding-y: 3.2rem;
+$meganav-animation-time: 300ms; // CAUTION: This time is tied to a setTimeout in MegaNav.vue

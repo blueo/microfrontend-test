@@ -1,0 +1,11 @@
+/**
+ * A central location for the z-index layers
+ * so they can be easily modified in a single location
+ *
+ * Use increments of 5 where possible to make
+ * adding new items easier in future
+ */
+
+// $z-header: 10;
+// $z-skiplinks: 15; // put it above header
+

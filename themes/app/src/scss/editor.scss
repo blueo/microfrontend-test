@@ -1,0 +1,47 @@
+/* -------------------------------------- */
+
+//      Compiled styles for the CMS       //
+
+/* -------------------------------------- */
+
+/**
+ * --------
+ * Settings - global variables for the project
+ * --------
+ */
+
+@import '00_settings/variables';
+
+/**
+ * ------
+ * Mixins - global reusable styles
+ * ------
+ */
+
+@import '20_mixins/icon';
+
+/**
+ * ----------
+ * Frameworks - standard styling libraries to use
+ * ----------
+ */
+
+@import '30_frameworks/bootstrap';
+
+/**
+ * ----
+ * Base - essential styling for the project
+ * ----
+ */
+
+@import '40_base/global';
+@import '40_base/fonts';
+@import '40_base/typography';
+
+/**
+* ----------
+* Frameworks - standard styling libraries to use
+* ----------
+*/
+
+@import '80_third-party/tinymce';

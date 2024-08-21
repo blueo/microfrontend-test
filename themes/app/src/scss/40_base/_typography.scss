@@ -1,0 +1,203 @@
+/**
+ * Styling for the site typography
+ */
+
+html,
+body {
+  /* stylelint-disable declaration-property-unit-disallowed-list */
+  font-size: 10px; // For easy conversion of px to rem, 18px = 1.8rem
+  /* stylelint-enable declaration-property-unit-disallowed-list */
+}
+
+/**
+ * General
+ */
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+p {
+  font-size: $font-size-paragraph;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-paragraph;
+  color: $font-color-paragraph;
+  margin-top: $margin-top-paragraph;
+  margin-bottom: $margin-bottom-paragraph;
+
+  * {
+    font-size: $font-size-paragraph;
+    line-height: $line-height-paragraph;
+  }
+}
+
+/**
+ * Headings
+ *
+ * All headings have associated classes to allow for easy overrides
+ * <h1> styles <--> .h1 styles
+ * <h2> styles <--> .h2 styles
+ * ...
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+
+  a {
+    color: inherit;
+  }
+}
+
+h1 {
+  font-size: $font-size-h1-mobile;
+  font-weight: $font-weight-h1;
+  line-height: $line-height-h1-mobile;
+  color: $font-color-h1;
+  margin-top: $margin-top-h1;
+  margin-bottom: $margin-bottom-h1;
+
+  @include media-breakpoint-up(tablet-s) {
+    font-size: $font-size-h1-tablet;
+  }
+
+  @include media-breakpoint-up(desktop-s) {
+    font-size: $font-size-h1;
+    line-height: $line-height-h1;
+  }
+}
+
+h2 {
+  font-size: $font-size-h2-mobile;
+  font-weight: $font-weight-h2;
+  line-height: $line-height-h2-mobile;
+  color: $font-color-h2;
+  margin-top: $margin-top-h2;
+  margin-bottom: $margin-bottom-h2;
+
+  @include media-breakpoint-up(tablet-s) {
+    font-size: $font-size-h2;
+    line-height: $line-height-h2;
+  }
+}
+
+h3 {
+  font-size: $font-size-h3;
+  font-weight: $font-weight-h3;
+  line-height: $line-height-h3;
+  color: $font-color-h3;
+  margin-top: $margin-top-h3;
+  margin-bottom: $margin-bottom-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+  font-weight: $font-weight-h4;
+  line-height: $line-height-h4;
+  color: $font-color-h4;
+  margin-top: $margin-top-h4;
+  margin-bottom: $margin-bottom-h4;
+}
+
+h5 {
+  font-size: $font-size-h5;
+  font-weight: $font-weight-h5;
+  line-height: $line-height-h5;
+  color: $font-color-h5;
+  margin-top: $margin-top-h5;
+  margin-bottom: $margin-bottom-h5;
+}
+
+h6 {
+  font-size: $font-size-h6;
+  font-weight: $font-weight-h6;
+  line-height: $line-height-h6;
+  color: $font-color-h6;
+  margin-top: $margin-top-h6;
+  margin-bottom: $margin-bottom-h6;
+}
+
+// add header override classes
+
+.h1 {
+  @extend h1;
+}
+
+.h2 {
+  @extend h2;
+}
+
+.h3 {
+  @extend h3;
+}
+
+.h4 {
+  @extend h4;
+}
+
+.h5 {
+  @extend h5;
+}
+
+.h6 {
+  @extend h6;
+}
+
+/**
+ * Other type styles
+ */
+
+.lead {
+  font-size: $font-size-lead-mobile;
+  line-height: $line-height-lead-mobile;
+  font-weight: $font-weight-light;
+  color: $font-color-lead;
+  margin-top: $margin-top-lead;
+  margin-bottom: $margin-bottom-lead;
+
+  @include media-breakpoint-up(tablet-s) {
+    font-size: $font-size-lead;
+    line-height: $line-height-lead-mobile;
+  }
+}
+
+.caption {
+  font-size: $font-size-caption;
+  line-height: $line-height-caption;
+  font-weight: $font-weight-caption;
+  color: $font-color-caption;
+  margin-top: $margin-top-caption;
+  margin-bottom: $margin-bottom-caption;
+}
+
+blockquote {
+  $blockquote-indent: 3.6rem;
+
+  font-size: $font-size-blockquote;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-blockquote;
+  color: $font-color-blockquote;
+  margin-top: $margin-top-blockquote;
+  margin-left: $blockquote-indent;
+  margin-bottom: $margin-bottom-blockquote;
+  position: relative;
+
+  &::before {
+    content: '“';
+    font-size: 5.4rem;
+    font-weight: $font-weight-medium;
+    line-height: 0.65;
+    position: absolute;
+    left: -$blockquote-indent;
+  }
+}

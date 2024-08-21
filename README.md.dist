@@ -1,0 +1,170 @@
+# {Vendor} {Project} overview
+
+<!-- insert codecov badge here - https://docs.codecov.com/docs/status-badges -->
+<!-- insert circleci badge here - https://circleci.com/docs/status-badges/ -->
+
+* [Project Confluence Page]({add link to project confluence})
+
+## :genie: Getting started
+
+### Set up local environment
+
+1. Ensure you have `DDEV` [installed](https://ddev.readthedocs.io/en/stable/) and [docker desktop](https://ddev.readthedocs.io/en/stable/users/install/docker-installation/#docker-installation) running.
+2. Start `DDEV`  
+   ```shell
+   ddev start
+   ```
+
+[More information about setting up and using `DDEV`](https://silverstripe.atlassian.net/wiki/x/mgANt)
+
+### Build the application
+
+> [!TIP]
+> If you want to run these locally, just remove the `ddev` part of the command.  
+> **Note**: Anything that accesses the database needs to be run within `DDEV`
+
+
+Run [composer](https://getcomposer.org/doc/00-intro.md)
+```sh
+ddev composer install
+```
+
+Install [yarn](https://yarnpkg.com/getting-started) dependencies inside the `DDEV` environment
+```sh
+ddev yarn
+```
+
+You may need to run yarn dev to build dev js and scss inside the `DDEV` environment
+```sh
+ddev yarn dev
+```
+
+> [!NOTE]  
+> It is usually faster to run yarn commands *outside* of the `DDEV` box, on your host machine, but you may need to update/change your node version to match the one used in the project.
+> ```sh
+> # i.e.
+> # install node and use the correct version for the project locally
+> nvm install && nvm use
+> # install dependencies and build outside of DDEV
+> npx yarn && yarn dev
+> ```
+
+Run a dev/build within your DDEV environment
+```sh
+ddev composer dev-build
+```
+
+> [!TIP]
+> While commands can be run via ssh-ing into the ddev container, this is not recommended as they are often slower than prefixing with ddev
+
+
+
+### Environment variables
+
+- `SS_MFA_SECRET_KEY`: [Configure this](https://github.com/silverstripe/silverstripe-totp-authenticator#configuration)
+  to use multi factor authentication. Ensure you create encryption keys for UAT and Production on your Silverstripe Cloud
+  stack (These are generated automatically for CWP stacks). Note: If UAT/Prod have the same secret key, snapshotting
+  between environments allows CMS users to use the same MFA credentials.
+- `DEBUGBAR_DISABLE`: Set this to `true` to disable silverstripe-debugbar.
+- `HIDE_BETTER_NAVIGATOR`: Set this to `true` to disable silverstripe-betternavigator.
+- `MIX_BROWSERSYNC`: Set this to `true` if you want to use [browsersync](https://browsersync.io/).  
+ Note: you'll need to install [ddev/ddev-browsersync](https://github.com/ddev/ddev-browsersync)
+
+## :toolbox: Tools and commands
+
+### Build
+
+* `yarn` install dependencies
+* `yarn dev` builds dev js and scss
+* `yarn watch` same as `yarn dev` but watches for changes
+* `yarn build` minifies production files
+* `yarn lint` lints js and scss
+* `yarn storybook` build and run Storybook UI component library
+* `ddev composer dev-build` flush and build the silverstripe database
+* `ddev composer populate` repopulate the fixtures in the database
+* `composer security-audit` run the static code analysis and dependency vulnerability tools
+
+> [!IMPORTANT]  
+> Scripts that require database access will need to be run within your `DDEV` environment  
+> i.e. `ddev composer dev-build` `ddev composer populate`
+
+
+<!-- highly recommended if you are using populate
+
+### Refresh
+
+These are convenience commands used when rebasing or switching branches.
+
+* `composer refresh` install dependencies, build and populate
+* `yarn refresh` install dependencies, compile and watch for changes
+
+-->
+
+### Test
+> [!NOTE]  
+> To run the yarn commands on your host machine, ensure node is installed and the correct version  
+> Otherwise run them within `DDEV` e.g. `ddev yarn test`
+
+* `yarn test` run front-end tests (both Jest and Cypress)
+* `yarn test:app` run Jest tests only
+* `yarn test:e2e` run Cypress tests only
+* `npx cypress open` run Cypress tests with GUI
+* `ddev composer test` run phpunit tests
+* `ddev composer test-phpunit-coverage` run phpunit tests and generate html, xml coverage reports
+
+> [!IMPORTANT]  
+> Scripts that require database access will need to be run within your `DDEV` environment  
+> i.e. `ddev composer test` `ddev composer test-phpunit-coverage`
+
+### Lint
+
+* `composer silverstripe-standards` run linting tasks for PHP and JavaScript
+
+### Other
+* `nvm install` install the correct node version for the project on your host machine, as defined in `.nvmrc`
+* `nvm use` use the correct node version for the project on your host machine.  
+  * Edit `node_version:` in `.ddev/config.yaml` for the `DDEV` environment.
+* `ddev sake dev/build flush=1` run a CLI dev/build via sake
+* `ddev sake dev/task/ProcessJobQueueTask` run any queued jobs which have not yet been started
+
+## :student: Project information
+
+Other non-standard project specific information is listed below.
+
+<!-- insert project specific documentation here, such as elastic configuration or other api integrations -->
+
+## :office: Further documentation and how to
+
+### Project
+
+* [Definition of Ready / Done](docs/definition-of-ready-done.md)
+* [Project workflow](docs/project-workflow.md)
+* [Deployments](docs/deployments-tagging.md)
+
+### Practice
+
+* [Coding standards](docs/coding-standards.md)
+* [Namespacing](docs/namespacing.md)
+* [Git - best practices](docs/git.md)
+* [Git - actions](docs/actions.md)
+* [XDebug](docs/xdebug.md)
+
+### Quality control
+
+* [Acceptance Testing with Cypress](docs/cypress.md)
+* [Maintaining a reusable component Library with Storybook](docs/storybook.md)
+* [CI - Testing with Lighthouse](docs/lighthouse.md)
+* [Accessibility checklist](docs/accessibility.md)
+* [Vue - Unit Testing](docs/vue-test.md)
+
+### Troubleshooting
+
+* [LinkField (WIP)](docs/linkfield-wip.md)
+
+### Technical documentation and how to
+
+* [Vue - Setup/Removal](docs/vue-setup.md)
+* [Adding CWP and/or watea theme](docs/cwp.md)
+* [Installing github actions](docs/actions.md)
+* [Pre-installed modules](docs/preinstalled-modules.md)
+* [Integrating with third party APIs](https://github.com/silverstripeltd/api-integration-skeleton)

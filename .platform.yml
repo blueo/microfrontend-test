@@ -1,0 +1,9 @@
+php_settings:
+  version: 8.3
+
+# Uncomment the below if using the QueuedJobs module
+#crons:
+#  queuedjobs_task:
+#    time: '* * * * *'
+#    sake_once: "dev/tasks/ProcessJobQueueTask"
+#    vhost: "mysite"
