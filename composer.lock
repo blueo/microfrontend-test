@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ffcd681af0d4e160e1fd7234f2014f48",
+    "content-hash": "2508f47c0c422a380ac932b8ff1182f2",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -443,6 +443,84 @@
                 "source": "https://github.com/defuse/php-encryption/tree/v2.4.0"
             },
             "time": "2023-06-19T06:10:36+00:00"
+        },
+        {
+            "name": "dnadesign/silverstripe-elemental",
+            "version": "5.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-elemental.git",
+                "reference": "63066182f45628fec2a11cc3826b9f066c4b9b96"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-elemental/zipball/63066182f45628fec2a11cc3826b9f066c4b9b96",
+                "reference": "63066182f45628fec2a11cc3826b9f066c4b9b96",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1",
+                "silverstripe/admin": "^2.0.1",
+                "silverstripe/cms": "^5",
+                "silverstripe/framework": "^5.2",
+                "silverstripe/graphql": "^5",
+                "silverstripe/vendor-plugin": "^2",
+                "silverstripe/versioned": "^2",
+                "silverstripe/versioned-admin": "^2",
+                "symbiote/silverstripe-gridfieldextensions": "^4"
+            },
+            "require-dev": {
+                "phpstan/extension-installer": "^1.3",
+                "silverstripe/documentation-lint": "^1",
+                "silverstripe/frameworktest": "^1",
+                "silverstripe/recipe-testing": "^3",
+                "silverstripe/standards": "^1"
+            },
+            "suggest": {
+                "dnadesign/silverstripe-elemental-subsites": "Adds subsite support to elemental",
+                "dnadesign/silverstripe-elemental-userforms": "Adds userform support to elemental",
+                "dnadesign/silverstripe-elemental-virtual": "Adds support to share blocks between pages",
+                "silverstripe/elemental-blocks": "Adds a set of common SilverStripe content block types",
+                "silverstripe/fulltextsearch": "Adds fulltext search capability for elements using Solr"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "client/dist",
+                    "client/lang"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "DNADesign\\Elemental\\": [
+                        "src/",
+                        "_legacy/"
+                    ],
+                    "DNADesign\\Elemental\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandre Saelens",
+                    "email": "alexandre.saelens@dna.co.nz"
+                }
+            ],
+            "description": "Elemental pagetype and collection of Elements",
+            "keywords": [
+                "Content Blocks",
+                "element",
+                "elemental",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/silverstripe/silverstripe-elemental/issues",
+                "source": "https://github.com/silverstripe/silverstripe-elemental/tree/5.2.4"
+            },
+            "time": "2024-07-23T02:16:18+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -4163,6 +4241,112 @@
             "time": "2023-09-18T03:20:29+00:00"
         },
         {
+            "name": "silverstripe/elemental-bannerblock",
+            "version": "3.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-elemental-bannerblock.git",
+                "reference": "fbbad2379663b92ad0417cf197b2672767e78569"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-elemental-bannerblock/zipball/fbbad2379663b92ad0417cf197b2672767e78569",
+                "reference": "fbbad2379663b92ad0417cf197b2672767e78569",
+                "shasum": ""
+            },
+            "require": {
+                "dnadesign/silverstripe-elemental": "^5.0.0-alpha2",
+                "php": "^8.1",
+                "silverstripe/admin": "^2",
+                "silverstripe/cms": "^5",
+                "silverstripe/elemental-fileblock": "^3",
+                "silverstripe/framework": "^5",
+                "silverstripe/vendor-plugin": "^2"
+            },
+            "require-dev": {
+                "phpstan/extension-installer": "^1.3",
+                "phpunit/phpunit": "^9.6",
+                "silverstripe/standards": "^1",
+                "squizlabs/php_codesniffer": "^3"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "client/dist"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\ElementalBannerBlock\\": "src/",
+                    "SilverStripe\\ElementalBannerBlock\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "A banner block for the silverstripe-elemental module",
+            "keywords": [
+                "Content Blocks",
+                "elemental",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/silverstripe/silverstripe-elemental-bannerblock/issues",
+                "source": "https://github.com/silverstripe/silverstripe-elemental-bannerblock/tree/3.2.2"
+            },
+            "time": "2024-07-29T04:52:46+00:00"
+        },
+        {
+            "name": "silverstripe/elemental-fileblock",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-elemental-fileblock.git",
+                "reference": "127895eb01c969ae63c739fa0e1efceebef88817"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-elemental-fileblock/zipball/127895eb01c969ae63c739fa0e1efceebef88817",
+                "reference": "127895eb01c969ae63c739fa0e1efceebef88817",
+                "shasum": ""
+            },
+            "require": {
+                "dnadesign/silverstripe-elemental": "^5",
+                "php": "^8.1",
+                "silverstripe/assets": "^2",
+                "silverstripe/cms": "^5",
+                "silverstripe/framework": "^5",
+                "silverstripe/vendor-plugin": "^2"
+            },
+            "require-dev": {
+                "silverstripe/recipe-testing": "^3"
+            },
+            "type": "silverstripe-vendormodule",
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\ElementalFileBlock\\": "src/",
+                    "SilverStripe\\ElementalFileBlock\\Tests\\": "tests/",
+                    "SilverStripe\\ElementalFileBlock\\Tests\\Behat\\Context\\": "tests/behat/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "A file block for the silverstripe-elemental module",
+            "keywords": [
+                "Content Blocks",
+                "elemental",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/silverstripe/silverstripe-elemental-fileblock/issues",
+                "source": "https://github.com/silverstripe/silverstripe-elemental-fileblock/tree/3.1.0"
+            },
+            "time": "2023-08-29T23:20:22+00:00"
+        },
+        {
             "name": "silverstripe/environmentcheck",
             "version": "3.0.2",
             "source": {
@@ -5688,6 +5872,81 @@
                 }
             ],
             "time": "2024-06-12T11:22:32+00:00"
+        },
+        {
+            "name": "symbiote/silverstripe-gridfieldextensions",
+            "version": "4.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symbiote/silverstripe-gridfieldextensions.git",
+                "reference": "275db87086c07113f77c7595de95ae9f3c0e9a0c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symbiote/silverstripe-gridfieldextensions/zipball/275db87086c07113f77c7595de95ae9f3c0e9a0c",
+                "reference": "275db87086c07113f77c7595de95ae9f3c0e9a0c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1",
+                "silverstripe/framework": "^5",
+                "silverstripe/vendor-plugin": "^2"
+            },
+            "replace": {
+                "ajshort/silverstripe-gridfieldextensions": "self.version",
+                "silverstripe-australia/gridfieldextensions": "self.version"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.6",
+                "silverstripe/versioned": "^2",
+                "squizlabs/php_codesniffer": "^3.7"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "screenshots": [
+                    "docs/en/_images/editable-rows.png",
+                    "docs/en/_images/add-existing-search.png"
+                ],
+                "expose": [
+                    "css",
+                    "javascript",
+                    "client/lang"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symbiote\\GridFieldExtensions\\": "src/",
+                    "Symbiote\\GridFieldExtensions\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Short",
+                    "email": "andrewjshort@gmail.com"
+                },
+                {
+                    "name": "Marcus Nyeholt",
+                    "email": "marcus@symbiote.com.au"
+                }
+            ],
+            "description": "A collection of useful grid field components",
+            "homepage": "http://github.com/symbiote/silverstripe-gridfieldextensions",
+            "keywords": [
+                "gridfield",
+                "silverstripe",
+                "sort",
+                "sort field",
+                "sortable"
+            ],
+            "support": {
+                "issues": "http://github.com/symbiote/silverstripe-gridfieldextensions/issues",
+                "source": "https://github.com/symbiote/silverstripe-gridfieldextensions/tree/4.0.8"
+            },
+            "time": "2024-06-17T00:50:38+00:00"
         },
         {
             "name": "symfony/cache",

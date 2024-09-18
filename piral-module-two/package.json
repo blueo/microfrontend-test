@@ -1,0 +1,39 @@
+{
+  "name": "piral-module-two",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "pilet"
+  ],
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "piral-cli": "1.6.1",
+    "piral-cli-esbuild": "^1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router": "5.3.4",
+    "react-router-dom": "5.3.4",
+    "test-app": "../piral-app/dist/emulator/test-app-1.0.0.tgz",
+    "tslib": "2.7.0",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "start": "pilet debug",
+    "build": "pilet build",
+    "upgrade": "pilet upgrade",
+    "postinstall": "pilet declaration"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "importmap": {
+    "inherit": [
+      "test-app"
+    ],
+    "imports": {}
+  },
+  "source": "src/index.tsx"
+}

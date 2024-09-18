@@ -44,3 +44,8 @@ SilverStripe\Core\Injector\Injector:
         - 'admin/'
         - 'dev/'
         - 'saml/'
+
+
+Page:
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension

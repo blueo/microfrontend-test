@@ -1,0 +1,7 @@
+App\MicroAdmin:
+    pilets:
+        - name: 'piral_module_one'
+          version: 1
+          link: '/_resources/piral-module-one/dist/index.js'
+          requireRef: System.import
+          spec: v2

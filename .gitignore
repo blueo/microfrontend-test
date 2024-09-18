@@ -33,7 +33,6 @@ yarn-error.log
 /public/assets/
 
 # Silverstripe/PHP specific
-/.env
 /public/_resources/
 /vendor/
 /silverstripe.log

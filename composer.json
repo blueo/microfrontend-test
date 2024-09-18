@@ -3,6 +3,7 @@
     "description": "The SilverStripe Platform base project / installer.",
     "require": {
         "php": "^8.3",
+        "dnadesign/silverstripe-elemental": "^5.2",
         "jonom/focuspoint": "^5",
         "jonom/silverstripe-betternavigator": "^6",
         "kinglozzer/metatitle": "^3",
@@ -10,6 +11,7 @@
         "silverstripe/auditor": "^3",
         "silverstripe/crontask": "^3",
         "silverstripe/dynamodb": "^5",
+        "silverstripe/elemental-bannerblock": "^3.2",
         "silverstripe/environmentcheck": "^3",
         "silverstripe/linkfield": "^4",
         "silverstripe/raygun": "^4",
@@ -77,7 +79,9 @@
             "web.config"
         ],
         "expose": [
-            "themes/app/dist"
+            "piral-app/dist/release",
+            "piral-module-one/dist",
+            "piral-module-two/dist"
         ],
         "resources-dir": "_resources"
     }
